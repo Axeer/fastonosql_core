@@ -514,14 +514,14 @@ convert_to_t ConvertValue(common::FundamentalValue* value, const std::string& de
     }
     return common::ConvertToCharBytes(res);
   } else if (value_type == common::Value::TYPE_INTEGER64) {
-    long res;
+    int64_t res;
     if (!value->GetAsInteger64(&res)) {
       DNOTREACHED();
       return convert_to_t();
     }
     return common::ConvertToCharBytes(res);
   } else if (value_type == common::Value::TYPE_UINTEGER64) {
-    unsigned long res;
+    uint64_t res;
     if (!value->GetAsUInteger64(&res)) {
       DNOTREACHED();
       return convert_to_t();
@@ -837,14 +837,14 @@ convert_to_t ConvertValueForCommandLine(common::FundamentalValue* value, const s
     }
     return common::ConvertToCharBytes(res);
   } else if (value_type == common::Value::TYPE_INTEGER64) {
-    long res;
+    int64_t res;
     if (!value->GetAsInteger64(&res)) {
       DNOTREACHED();
       return convert_to_t();
     }
     return common::ConvertToCharBytes(res);
   } else if (value_type == common::Value::TYPE_UINTEGER64) {
-    unsigned long res;
+    uint64_t res;
     if (!value->GetAsUInteger64(&res)) {
       DNOTREACHED();
       return convert_to_t();
